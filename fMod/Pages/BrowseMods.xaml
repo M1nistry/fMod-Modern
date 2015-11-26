@@ -7,10 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
-        <!-- TODO: set @SelectedSource -->
-        <mui:ModernTab Layout="Tab">
+        <mui:ModernTab Layout="Tab" SelectedSource="/Pages/Content/BrowseCategories.xaml">
             <mui:ModernTab.Links>
-                <!-- TODO: set @Source -->
                 <mui:Link DisplayName="Categories" Source="/Pages/Content/BrowseCategories.xaml"/>
                 <mui:Link DisplayName="Recently Updated" />
             </mui:ModernTab.Links>

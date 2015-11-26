@@ -1,17 +1,11 @@
 ﻿using FirstFloor.ModernUI.Presentation;
 using FirstFloor.ModernUI.Windows;
 using System;
-using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Windows.Media.Imaging;
 using fMod.JSON;
-using FirstFloor.ModernUI.Windows.Controls;
 using Newtonsoft.Json;
 
 namespace fMod
@@ -29,12 +23,14 @@ namespace fMod
             var result = await webClient.GetStringAsync("http://api.factoriomods.com/categories");
             var categories = JsonConvert.DeserializeObject<Category[]>(result);
 
-            return new LinkCollection(from c in categories
+            var lCollection = new LinkCollection(from c in categories
                 select new Link
                 {
                     DisplayName = c.Title,
                     Source = new Uri($"http://api.factoriomods.com/mods?category={c.Name}")
                 });
+            var orderedCollection = lCollection.OrderBy(x => x.DisplayName).ToList();
+            return new LinkCollection(from n in orderedCollection select n);
         }
 
         /// <summary>
