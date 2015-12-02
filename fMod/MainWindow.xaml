@@ -14,7 +14,7 @@
         <mui:LinkGroup DisplayName="Mods">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="Browse" Source="/Pages/BrowseMods.xaml"/>
-                <!-- <mui:Link DisplayName="Installed"/> -->
+                <mui:Link DisplayName="Installed"/>
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
