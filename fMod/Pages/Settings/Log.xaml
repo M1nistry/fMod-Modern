@@ -9,8 +9,8 @@
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
             <StackPanel MinWidth="200">
-                <TextBlock Text="BASIC PAGE" Style="{StaticResource Heading2}" />
-                <TextBlock Text="Content goes here" />
+                <TextBlock Text="Log" Style="{StaticResource Heading2}" />
+                <ListBox x:Name="ListBoxLog" Margin="2"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>
